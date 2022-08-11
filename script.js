@@ -1,4 +1,4 @@
-import myJson from './mox.json' assert {type: 'json'};
+import myJson from './json-data/mox.json' assert {type: 'json'};
 
 let task1, task2, task3, committingAdvice;
 committingAdvice = "Each assignment should have 1 or more commits in your repo, but avoid grouping more than one assignment in a single commit. Please mention the assignment number in the commit message, e.g. ״TASK 1 - make MovieList display movie posters”, etc";
@@ -7,37 +7,50 @@ task2 = "Add some “Sort” UI for sorting movies list. Implement next sorting 
 task3 = "Replace movie mock data with real data coming from the API of TMDB (The Movie DataBase). Use their “now playing” endpoint (find the API documentation on the TMDB website). Please load the first 3 pages of movies from the API when the application starts.";
 
 // "(1) Movies' Posters - displays titles"
+// "(1) Movies' Posters - boxes for future imgs"
 
-
+var o = document.getElementById(`output`);
 myJson.forEach((el) => {
     const d = document;
-    const b = document.body;
+    // const b = document.body;
     const p = d.createElement(`p`)
     p.textContent = el.title;
-    b.appendChild(p);
+    o.appendChild(p);
 })
 
 let movieObj = {
-    "vote_count": 11027,
-    "id": 278,
-    "video": false,
-    "vote_average": 8.6,
-    "title": "The Shawshank Redemption",
-    "popularity": 36.049,
-    "poster_path": "/9O7gLzmreU0nGkIB6K3BsJbzvNv.jpg",
+    "vote_count": 12575,
+    "id": 680,   
+    "video": false,   
+    "vote_average": 8.4,   
+    "title": "Pulp Fiction",
+    "popularity": 39.11,   
+    "poster_path": "/dM2w364MScsjFf8pfMbaWUcWrR.jpg",
     "original_language": "en",
-    "original_title": "The Shawshank Redemption",
+    "original_title": "Pulp Fiction",
+   
     "genre_ids": [
-        18,
-        80
+      53,
+      80
     ],
-    "backdrop_path": "/j9XKiZrVeViAixVRzCta7h1VU9W.jpg",
+    "backdrop_path": "/4cDFJr4HnXN5AdPw4AKrmLlMWdO.jpg",
     "adult": false,
-    "overview": "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
-    "release_date": "1994-09-23"
+    "overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",   
+    "release_date": "1994-09-10"
 }
 const properties = Object.keys(movieObj);
 const entries = Object.entries(movieObj);
     for (let i = 0; i < properties.length; i+=1) {
     console.log(`${entries[i][0]} : ${entries[i][1]}`);
-    }
+    };
+
+    // modal([options])[.on('event')]
+    // modal(
+    //     { title: 'Delete object'
+    //     , content: 'Are you sure you want to delete this object?'
+    //     , buttons:
+    //       [ { text: 'Don’t delete', event: 'cancel', keyCodes: [ 27 ] }
+    //       , { text: 'Delete', event: 'confirm', className: 'button-danger', iconClassName: 'icon-delete' }
+    //       ]
+    //     })
+    //     .on('confirm', deleteItem)

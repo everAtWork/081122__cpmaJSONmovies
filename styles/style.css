@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: navajowhite;
+}
+#output{
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+}
+#test{
+    margin: 0 auto;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    border: 1px BLACK dashed;
+    background: url(../assets/pfposter.jpg) no-repeat center / contain;
+}
+#btn-close-modal {
+    width:100%;
+    text-align: center;
+    cursor:pointer;
+    color:#fff;
+}
+#demo01{
+    display: block;
+    width: 100%;
+    height: inherit;
+}
