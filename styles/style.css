@@ -28,6 +28,5 @@ body{
 }
 #demo01{
     display: block;
-    width: 100%;
     height: inherit;
 }

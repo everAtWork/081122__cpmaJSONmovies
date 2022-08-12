@@ -12,7 +12,6 @@ task3 = "Replace movie mock data with real data coming from the API of TMDB (The
 var o = document.getElementById(`output`);
 myJson.forEach((el) => {
     const d = document;
-    // const b = document.body;
     const p = d.createElement(`p`)
     p.textContent = el.title;
     o.appendChild(p);
@@ -34,23 +33,16 @@ let movieObj = {
       80
     ],
     "backdrop_path": "/4cDFJr4HnXN5AdPw4AKrmLlMWdO.jpg",
-    "adult": false,
     "overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",   
-    "release_date": "1994-09-10"
+    "release_date": "1994-09-10",
+    "adult": false,
 }
 const properties = Object.keys(movieObj);
 const entries = Object.entries(movieObj);
     for (let i = 0; i < properties.length; i+=1) {
-    console.log(`${entries[i][0]} : ${entries[i][1]}`);
+    const d = document;
+    const m = d.getElementById("modal-content")
+    const p = d.createElement("p")
+    m.append(p);
+    p.textContent = `${entries[i][0]} : ${entries[i][1]}`;
     };
-
-    // modal([options])[.on('event')]
-    // modal(
-    //     { title: 'Delete object'
-    //     , content: 'Are you sure you want to delete this object?'
-    //     , buttons:
-    //       [ { text: 'Don’t delete', event: 'cancel', keyCodes: [ 27 ] }
-    //       , { text: 'Delete', event: 'confirm', className: 'button-danger', iconClassName: 'icon-delete' }
-    //       ]
-    //     })
-    //     .on('confirm', deleteItem)
