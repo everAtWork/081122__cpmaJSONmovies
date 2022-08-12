@@ -41,7 +41,7 @@ const properties = Object.keys(movieObj);
 const entries = Object.entries(movieObj);
     for (let i = 0; i < properties.length; i+=1) {
     const d = document;
-    const m = d.getElementById("modal-content")
+    const m = d.getElementById("modal-body")
     const p = d.createElement("p")
     m.append(p);
     p.classList.add("text-center");
