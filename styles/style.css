@@ -1,17 +1,11 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body{
     background-color: navajowhite;
 }
-/* #output{
-    max-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: space-around;
-} */
 #test{
     margin: 0 auto;
     text-align: center;
@@ -20,13 +14,15 @@ body{
     border: 1px BLACK dashed;
     background: url(../assets/pfposter.jpg) no-repeat center / contain;
 }
-#btn-close-modal {
-    width:100%;
-    text-align: center;
-    cursor:pointer;
-    color:#fff;
-}
-#demo01{
+.modal-link{
     display: block;
-    height: inherit;
+    height: 100%;
 }
+/* #output{
+max-height: 80vh;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+align-content: space-around;
+} */

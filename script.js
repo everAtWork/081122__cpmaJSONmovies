@@ -44,5 +44,6 @@ const entries = Object.entries(movieObj);
     const m = d.getElementById("modal-content")
     const p = d.createElement("p")
     m.append(p);
+    p.classList.add("text-center");
     p.textContent = `${entries[i][0]} : ${entries[i][1]}`;
     };

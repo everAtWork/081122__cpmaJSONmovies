@@ -14,16 +14,17 @@
 </head>
 <body>
     <div class="container">
-        <div id="test"></div>
+        <div id="test">
+            <a data-target="#myModal" data-toggle="modal" href="" class="modal-link"></a>
+        </div>
 
 
-        <a data-target="#myModal" data-toggle="modal" href="" class="modal-link">see more</a>
-        <div role="dialog" id="myModal" class="modal modal-dialog fade">
-            <div id="modal-content" class="modal-content">
+        <div role="dialog" id="myModal" class="modal modal-dialog modal-lg fade">
+            <div class="modal-content">
                 <div class="modal-header"> <h4 class="modal-title">hey</h4>
                     <button type="button" data-dismiss="modal" class="close">&times;</button>
                 </div>
-                <div class="modal-body">wazzup</div>
+                <div id="modal-content" class="modal-body"></div>
                 <div class="modal-footer">
                     <button class="btn btn-danger" data-dismiss="modal" type="button">close</button>
                 </div>
