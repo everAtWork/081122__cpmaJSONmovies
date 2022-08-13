@@ -6,6 +6,9 @@
 body{
     background-color: navajowhite;
 }
+.card{
+    /* border: 2px yellowgreen dashed; */
+}
 #test{
     margin: 0 auto;
     text-align: center;
@@ -18,11 +21,10 @@ body{
     display: block;
     height: 100%;
 }
-/* #output{
-max-height: 80vh;
-display: flex;
+#output{
+/* display: flex;
 flex-direction: column;
 flex-wrap: wrap;
 align-items: center;
-align-content: space-around;
-} */
+align-content: space-between; */
+}

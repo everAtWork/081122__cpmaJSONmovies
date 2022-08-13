@@ -7,15 +7,22 @@ task2 = "Add some “Sort” UI for sorting movies list. Implement next sorting 
 task3 = "Replace movie mock data with real data coming from the API of TMDB (The Movie DataBase). Use their “now playing” endpoint (find the API documentation on the TMDB website). Please load the first 3 pages of movies from the API when the application starts.";
 
 // "(1) Movies' Posters - displays titles"
-// "(1) Movies' Posters - boxes for future imgs"
 
 var o = document.getElementById(`output`);
 myJson.forEach((el) => {
     const d = document;
-    const p = d.createElement(`p`)
-    p.textContent = el.title;
-    o.appendChild(p);
-})
+    const di = d.createElement(`div`)
+    const diCH = d.createElement(`div`)
+    const diCB = d.createElement(`div`)
+    di.classList.add('card', 'col-6', 'col-lg-3');
+    diCB.classList.add("card-body")
+    diCH.classList.add("card-header")
+    diCH.textContent = el.title;
+    o.appendChild(di);
+    di.appendChild(diCB);
+    diCB.appendChild(diCH);
+});
+
 
 let movieObj = {
     "vote_count": 12575,
@@ -36,7 +43,7 @@ let movieObj = {
     "overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",   
     "release_date": "1994-09-10",
     "adult": false,
-}
+};
 const properties = Object.keys(movieObj);
 const entries = Object.entries(movieObj);
     for (let i = 0; i < properties.length; i+=1) {
