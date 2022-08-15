@@ -7,20 +7,26 @@ task2 = "Add some “Sort” UI for sorting movies list. Implement next sorting 
 task3 = "Replace movie mock data with real data coming from the API of TMDB (The Movie DataBase). Use their “now playing” endpoint (find the API documentation on the TMDB website). Please load the first 3 pages of movies from the API when the application starts.";
 
 // "(1) Movies' Posters - displays titles"
-
+// const diRep = function () { document.createElement('div') }
 var o = document.getElementById(`output`);
 myJson.forEach((el) => {
     const d = document;
-    const di = d.createElement(`div`)
-    const diCH = d.createElement(`div`)
-    const diCB = d.createElement(`div`)
+    const di = d.createElement(`div`);
+    const diCH = d.createElement(`div`);
+    const diCB = d.createElement(`div`);
+    const modAncr = d.createElement('a');
     di.classList.add('card', 'col-6', 'col-lg-3');
-    diCB.classList.add("card-body")
-    diCH.classList.add("card-header")
+    diCB.classList.add("card-body");
+    diCH.classList.add("card-header");
     diCH.textContent = el.title;
+    modAncr.classList.add('modal-link');
     o.appendChild(di);
     di.appendChild(diCB);
     diCB.appendChild(diCH);
+    modAncr.setAttribute('data-bs-target', '#myModal');
+    modAncr.setAttribute('href', '');
+    modAncr.setAttribute('data-bs-toggle', 'modal');
+    diCB.appendChild(modAncr);
 });
 
 

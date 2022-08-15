@@ -18,8 +18,12 @@ body{
     background: url(../assets/pfposter.jpg) no-repeat center / contain;
 }
 .modal-link{
-    display: block;
-    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
 }
 #output{
 /* display: flex;
