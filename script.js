@@ -10,6 +10,7 @@ task3 = "Replace movie mock data with real data coming from the API of TMDB (The
 // const diRep = function () { document.createElement('div') }
 var o = document.getElementById(`output`);
 myJson.forEach((el) => {
+    
     const d = document;
     const di = d.createElement(`div`);
     const diCH = d.createElement(`div`);
@@ -18,15 +19,15 @@ myJson.forEach((el) => {
     di.classList.add('card', 'col-6', 'col-lg-3');
     diCB.classList.add("card-body");
     diCH.classList.add("card-header");
-    diCH.textContent = el.title;
     modAncr.classList.add('modal-link');
+    modAncr.setAttribute('href', '');
+    modAncr.setAttribute('data-bs-target', '#myModal');
+    modAncr.setAttribute('data-bs-toggle', 'modal');
     o.appendChild(di);
     di.appendChild(diCB);
     diCB.appendChild(diCH);
-    modAncr.setAttribute('data-bs-target', '#myModal');
-    modAncr.setAttribute('href', '');
-    modAncr.setAttribute('data-bs-toggle', 'modal');
     diCB.appendChild(modAncr);
+    diCH.textContent = el.title;
 });
 
 
@@ -59,4 +60,4 @@ const entries = Object.entries(movieObj);
     m.append(p);
     p.classList.add("text-center");
     p.textContent = `${entries[i][0]} : ${entries[i][1]}`;
-    };
+    }
